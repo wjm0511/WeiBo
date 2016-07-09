@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/main_layout"></include>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/main_top"
+            android:id="@+id/top"/>
+        <LinearLayout
+            android:id="@+id/middle"
+            android:layout_below="@+id/top"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ListView
+                android:id="@+id/app_index_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                android:fadingEdge="vertical"
+                android:fadingEdgeLength="5dp"
+                android:divider="@null"
+                android:listSelector="@drawable/xml_list_bg"
+                android:cacheColorHint="#00000000">
+
+            </ListView>
+
+        </LinearLayout>
+
+        <include layout="@layout/main_tab"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_alignParentBottom="true"/>
+        
+    </RelativeLayout>
+
+</merge>
